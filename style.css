@@ -1,0 +1,234 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #222;
+	font: 16px sans-serif;
+	margin: 0;
+}
+
+ul {
+	list-style-type: none;
+	min-width: 300px;
+	margin: 3px 0 0 6px;
+}
+
+li {
+	color: #2a4;
+	display: inline;
+}
+
+li.add {
+	color: #222;
+	font: 11px monospace;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+li.add:hover { border-left: 5px solid #A9DC76 }
+li.add:hover:after {
+	background: #A9DC76;
+	color: #222;
+	content: 'ADD';
+	display: flex;
+	position: absolute;
+	right: 9px;
+	align-items: center;
+	height: 20px;
+	border-radius: 9px;
+	border: 0;
+	padding: 1px 5px 1px;
+}
+
+li > .logo { height: 22px !important }
+
+.logo {
+	margin: 0 7px 0 3px;
+	height: 18px;
+	z-index: 999;
+}
+
+input, select {
+	background: #777;
+	border: 1px solid #ccc;
+	border-radius: 0;
+	margin: 0;
+	padding: 8px;
+	font: 11px monospace;;
+}
+
+input.blank { /* crappy gui hack */
+	background: #222;
+	border: 1px solid #222;
+	border-left: 1px solid #ccc;
+}
+
+select { font: 9.5px monospace }
+select:focus-visible { outline: 0 }
+
+.smooth { transition: all .2s }
+
+.container { min-height: fit-content }
+
+hr {
+	border: 1px dotted #555;
+	margin: 6px 0 0 0;
+}
+h1 { font-size: 1.618em }
+h2 { font-size: 1em }
+small {
+	color:rgba(221, 51, 51, 0.618);
+	font-size: 0.6em;
+	margin: 0 11px 0 0;
+}
+
+.btn {
+	background: #999;
+	border-radius: 9px;
+	border: 0;
+	color: #222;
+	cursor: pointer;
+	display: inline-block;
+	font: 14px monospace;
+	outline: 0;
+	padding: 3px 7px 3px;
+	text-decoration: none;
+}
+.btn:hover { background: #888 }
+.btn:active,.btn:focus { background: #777 }
+.btn-a { background: #0ae }
+.btn-a:hover { background: #09d }
+.btn-a:active, .btn-a:focus { background: #08b }
+.btn-b { background:#3c5 }
+.btn-b:hover { background: #2b4 }
+.btn-b:active, .btn-b:focus { background: #2a4 }
+.btn-c {
+	background: #d33;
+	font: 11px monospace;
+	margin: 0 0 0 6px;
+	padding: 1px 5px 1px;
+}
+.btn-c:hover { background: #c22 }
+.btn-c:active, .btn-c:focus { background: #b22 }
+
+.icon {
+	height: 22px;
+	top: 6px;
+	position: relative;
+}
+
+input:focus, select:focus { border-color: #5ab }
+
+input[type=text] {
+	-webkit-appearance: none;
+	width: 143px;
+	outline: 0;
+	margin: 0 7px 0 0;
+}
+
+.addon{
+	box-shadow: 0 0 0 1px #ccc;
+	color: #0ae;
+	font: 11px monospace;
+	margin: 0 0 0 6px;
+	outline: 0;
+	padding: 8px 12px;
+}
+
+.hide { display: none }
+
+.row {
+	display: block;
+	margin: 0 0 3px 0;
+	overflow: auto;
+}
+.col {
+	display: inline;
+	float: left;
+}
+.c12 { width: 100% }
+.c11 { width: 91.66% }
+.c10 { width: 83.33% }
+.c9 { width: 75% }
+.c8 { width: 66.66% }
+.c7 { width: 58.33% }
+.c6 { width: 50% }
+.c5 { width: 41.66% }
+.c4 { width: 33.33% }
+.c3 { width: 25% }
+.c2 { width: 16.66% }
+.c1 { width: 8.33% }
+
+.msg {
+	background: rgba(221, 51, 51, 0.55);
+	border-left: 5px solid #d33;
+	padding: 6px;
+}
+
+.coin {
+	background: #777;
+	border-left: 5px solid #555;
+	padding: 3px;
+	font: 13px monospace;
+	display: flex;
+	align-items: center;
+	margin: 1px 0 0 0;
+}
+
+.pop:before {
+	border-left: 29px solid #222;
+	position: absolute;
+	left: 5px;
+	color: #222;
+	content: ' ';
+	display: flex;
+	align-items: center;
+	height: 24px;
+}
+._ {
+	position: absolute;
+	margin-left: 6px;
+	right: 0px;
+}
+.ticker {
+	font-weight: bold;
+	margin-right: 3px;
+	width: 25px;
+}
+
+.coin.add { border-right: 5px solid #222 }
+.down {
+	background: rgba(255, 97, 136, 0.55);
+	border-left: 5px solid #FF6188;
+}
+.up {
+	background: rgba(169, 220, 118, 0.55);
+	border-left: 5px solid #A9DC76;
+}
+
+.spinner {
+	display: inline-block;
+	width: 64px;
+	height: 64px;
+	position: relative;
+    top: 34px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+.spinner:after {
+	content: '';
+	display: block;
+	width: 50%;
+	height: 50%;
+	margin: 10px;
+	border-radius: 50%;
+	border: 6px solid #cef;
+	border-color: #cef transparent #cef transparent;
+	animation: spin 1.2s linear infinite;
+}
+@keyframes spin {
+	0% { transform: rotate(0deg) }
+	100% { transform: rotate(360deg) }
+}

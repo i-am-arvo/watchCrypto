@@ -1,0 +1,11 @@
+{
+    "manifest_version": 2,
+
+    "name": "watchCrypto",
+    "description": "Crypto Watchlist Using CoinMarketCap API",
+    "version": "0.1",
+    "icons": {"128": "icon.png" },
+    "browser_action": { "default_popup": "pop.html" },
+    "permissions": [ "https://pro-api.coinmarketcap.com/*" ],
+    "background": { "scripts": ["js/pop.js", "js/cfg.js"] }
+}

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">
+	<script src="js/cfg.js"></script>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col c12">
+			<ul>
+				<li><img class="icon" src="icon.png"> watch<b>Crypto</b><small> 0.1-alpha</small></li>
+				<li><a class="btn btn-a smooth" href="pop.html">HOME</a></li>
+				<li><a class="btn btn-a smooth" href="cfg.html">CONFIG</a></li>
+			</ul>
+			<hr>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col c12">
+			<div class="msg hide" id="error">
+				<strong id="error_message"></strong>
+			</div>
+			<span class="addon">API KEY &nbsp;</span><input type="text" id="apiKey" autoComplete="off">
+			<a class="btn btn-b smooth" id="setKey">SET</a>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col c12">
+			<span class="addon">ADD COIN </span><input type="text" id="search" autoComplete="off">
+			<ul class="hide" id="results"></ul>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col c12">
+			<span class="addon">CURRENCY </span><select id="currency" class="smooth"></select>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col c12">
+			<span class="addon">WATCHLIST</span><input type="text" class="blank" placeholder="click to remove coin" disabled>
+		</div>
+		<div class="col c12" id="myCoins">&nbsp;</div>
+	</div>
+</div>
+</body>
+</html>
